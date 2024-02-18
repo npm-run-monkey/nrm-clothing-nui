@@ -40,7 +40,7 @@ const Item: FC<ItemProps> = ( { type, title, componentId, drawable, texture } ) 
     {
         if (type == "item")
         {
-            setState(prevState => ({ ...prevState, drawable: prevState.drawable + int }));
+            setState(prevState => ({ ...prevState, drawable: prevState.drawable + int, texture: 0 }));
             return;
         }
 
@@ -51,7 +51,7 @@ const Item: FC<ItemProps> = ( { type, title, componentId, drawable, texture } ) 
     {
         if (type == "item")
         {
-            setState(prevState => ({ ...prevState, drawable: Number(itemRef.current?.value) ?? 0 }));
+            setState(prevState => ({ ...prevState, drawable: Number(itemRef.current?.value) ?? 0, texture: 0 }));
             return;
         }
 
